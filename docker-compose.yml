@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  ip_bot:
+    image: ip_get:1.0
+    container_name: ip_bot
+    hostname: ip_bot
+    environment:
+      PYTHONUNBUFFERED: 1
+    networks:
+      - ip-bot-net
+
+
+networks:
+  ip-bot-net:
+    name: ip-bot-net
